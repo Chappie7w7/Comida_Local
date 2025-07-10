@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}Inicio | Gastronomía Local{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h2>¡Bienvenido a la Ruta Gastronómica de Nuestra Tierra!</h2>
+    <p>Descubre las recetas tradicionales, los sabores únicos y los eventos culinarios que celebran nuestra cultura local.</p>
+</section>
+
+<section class="features">
+    <div class="feature-card">
+        <h3>Recetas Tradicionales</h3>
+        <p>Explora una colección de recetas auténticas transmitidas de generación en generación.</p>
+        <a href="{{ url_for('main.recetas') }}">Ver recetas</a>
+    </div>
+
+    <div class="feature-card">
+        <h3>Mapa de Comidas Locales</h3>
+        <p>Ubica los mejores lugares donde se preparan nuestros platos típicos.</p>
+        <a href="{{ url_for('main.mapa') }}">Ver mapa</a>
+    </div>
+
+    <div class="feature-card">
+        <h3>Eventos y Festivales</h3>
+        <p>No te pierdas las ferias, festivales y celebraciones gastronómicas en tu localidad.</p>
+        <a href="{{ url_for('main.eventos') }}">Ver eventos</a>
+    </div>
+</section>
+{% endblock %}

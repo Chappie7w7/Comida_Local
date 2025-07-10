@@ -1,0 +1,32 @@
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f2ec;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.feature-card {
+    width: 30%;
+    background: #fffaf2;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.feature-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.feature-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #006400;
+    text-decoration: none;
+    font-weight: bold;
+}

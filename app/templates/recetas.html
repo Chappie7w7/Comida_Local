@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}Recetas Tradicionales{% endblock %}
+
+{% block content %}
+<h2>Recetas Tradicionales</h2>
+<ul>
+    <!-- Aquí irán las recetas cargadas desde base de datos -->
+    <li><a href="{{ url_for('main.receta_detalle', receta_id=1) }}">Tamales de la región</a></li>
+</ul>
+{% endblock %}
