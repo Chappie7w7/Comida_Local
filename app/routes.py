@@ -1,3 +1,4 @@
+import requests
 from flask import Blueprint, render_template
 
 bp = Blueprint('main', __name__)
@@ -8,7 +9,21 @@ def index():
 
 @bp.route('/recetas')
 def recetas():
-    return render_template('recetas.html')
+    url = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=Mexican'
+    response = requests.get(url)
+    data = response.json()
+
+    recetas = []
+    for item in data['meals']:
+        receta = {
+            'id': item['idMeal'],
+            'nombre': item['strMeal'],
+            'imagen_url': item['strMealThumb']
+        }
+        recetas.append(receta)
+
+    return render_template('recetas.html', recetas=recetas)
+
 
 @bp.route('/recetas/<int:receta_id>')
 def receta_detalle(receta_id):
