@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}Recetas Tradicionales | GastroLocal{% endblock %}
+
+{% block content %}
+<section class="recetas-hero">
+    <h1>Recetas Tradicionales</h1>
+    <p>Explora los sabores auténticos de nuestra tierra a través de estas preparaciones únicas.</p>
+</section>
+
+<section class="recetas-grid">
+    {% for receta in recetas %}
+    <div class="receta-card">
+        <img src="{{ receta.imagen_url }}" alt="Imagen de {{ receta.nombre }}">
+        <div class="receta-info">
+            <h3>{{ receta.nombre }}</h3>
+            <!-- Puedes eliminar esta línea si no tienes descripción -->
+            <!-- <p>{{ receta.descripcion }}</p> -->
+            <a href="https://www.themealdb.com/meal/{{ receta.id }}" target="_blank" class="btn-receta">Ver receta</a>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}

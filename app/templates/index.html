@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block title %}Inicio | Gastronomía Local{% endblock %}
+
+{% block content %}
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Sabores que cuentan historias</h1>
+        <p>Descubre la riqueza culinaria de nuestra localidad. Platos tradicionales, festivales y rutas gastronómicas te
+            esperan.</p>
+        <a href="{{ url_for('main.recetas') }}" class="btn-primary">Explorar Recetas</a>
+    </div>
+</section>
+
+<!-- FEATURED SECTIONS -->
+<section class="features">
+    <div class="feature-card">
+        <div class="icon-wrapper">
+            <i class="fas fa-utensils"></i>
+        </div>
+        <h3>Recetas Tradicionales</h3>
+        <p>Aprende a cocinar los platos que han dado sabor a nuestras raíces.</p>
+        <a href="{{ url_for('main.recetas') }}" class="btn-secondary">Ver recetas</a>
+    </div>
+
+    <div class="feature-card">
+        <div class="icon-wrapper">
+            <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <h3>Mapa de Comidas</h3>
+        <p>Ubica los lugares que sirven nuestras joyas gastronómicas.</p>
+        <a href="{{ url_for('main.mapa') }}" class="btn-secondary">Ver mapa</a>
+    </div>
+
+    <div class="feature-card">
+        <div class="icon-wrapper">
+            <i class="fas fa-calendar-alt"></i>
+        </div>
+        <h3>Eventos y Festivales</h3>
+        <p>Participa en celebraciones llenas de sabor, música y tradición.</p>
+        <a href="{{ url_for('main.eventos') }}" class="btn-secondary">Ver eventos</a>
+    </div>
+</section>
+{% endblock %}
