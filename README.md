@@ -6,13 +6,13 @@ Aplicación para promicionar la comida típica del municipio.
 Clonar el repositorio
 
 ```sh
-git clone "https://github.com/Chappie7w7/Work-Link.git"
+git clone "https://github.com/Chappie7w7/Comida_Local.git"
 ```
 
 Entrar a la carpeta
 
 ```sh
-cd Work-Link
+cd Comida_Local
 ```
 
 Crear el entorno virtual de python
@@ -54,30 +54,28 @@ A continuación un breve descripción para cada variable de entorno
 ```sh
 #para activar el entorno virtual
 .\.venv\Scripts\activate
-flask --app main.py run -h '0.0.0.0'
-# o
-flask run --debug -h '0.0.0.0'
+python run.py
 ```
 
 ## Estructura del proyecto
 
 - Carpeta `app`: Todo el código de la aplicación se encuentra aquí.
 
-- Carpeta `apis`: Aquí se crearán todas las APIs necesarias para el funcionamiento de la aplicación.
+- Archivo `routes.py`: En este archivo se crearán todas las rutas web que utilizará el cliente desde un navegador.
 
-- Carpeta `routes`: En esta carpeta se crearán todas las rutas web que utilizará el cliente desde un navegador.
+- Carpeta `static`: Archivos disponibles como recursos para las pagina web.
 
-- Carpeta `db`: En esta carpeta se encontrará la conexión a la base de datos
+- Carpeta `css`: Todos los estilos personalizados (colores, tipografías, layout, etc.).
 
-- Carpeta `controller`: En esta carpeta contendrá todos los archivos por cada modulo que controlara las acciones con la base de datos
+- Carpeta `images`: Imágenes locales para banners, recetas, íconos, etc.
 
-- Carpeta `models`: Modelos de las tablas para la base de datos
+- Carpeta `js`: Archivos JavaScript para la interactividad personalizada.
 
-- Carpeta `static`: archivos disponibles como recursos para las pagina web
+- Carpeta `templates`: Contendrá los archivos HTML para las paginas web.
 
-- Carpeta `templates`: Contendrá los archivos jinja2 para las paginas web
+- Archivo `run.py`: Archivo principal para arrancar la app.
 
-- Carpeta `Utils`: Utilidades para la pagina web, las cuales son los decoradores las rutas protegidas
+- Archivo `requirements.txt`: Lista de librerías necesarias para el proyecto.
 
 ## Migraciones para la BD SQL
 
