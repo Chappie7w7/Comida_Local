@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Mapa de Comida Tradicional | GastroLocal{% endblock %}
+
+{% block content %}
+<section class="mapa-section">
+    <h1>Mapa de Comidas Tradicionales</h1>
+    <p>Descubre los mejores lugares en Ocosingo para disfrutar de la gastronomía local.</p>
+    <div id="map"></div>
+</section>
+
+<!-- Pasar datos al script -->
+<script>
+    window.datosLugares = {{ lugares | tojson }};
+</script>
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mapa.css') }}">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="{{ url_for('static', filename='js/mapa.js') }}"></script>
+
+{% endblock %}

@@ -15,7 +15,7 @@
             <h3>{{ receta.nombre }}</h3>
             <!-- Puedes eliminar esta línea si no tienes descripción -->
             <!-- <p>{{ receta.descripcion }}</p> -->
-            <a href="https://www.themealdb.com/meal/{{ receta.id }}" target="_blank" class="btn-receta">Ver receta</a>
+            <a href="{{ url_for('main.ver_receta', id=receta.id) }}" class="btn-receta">Ver receta</a>
         </div>
     </div>
     {% endfor %}

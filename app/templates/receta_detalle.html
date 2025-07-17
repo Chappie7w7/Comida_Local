@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block title %}{{ receta.nombre }} | GastroLocal{% endblock %}
+
+{% block content %}
+<section class="detalle-receta container py-5">
+    <div class="row align-items-start g-5">
+
+        <!-- Imagen -->
+        <div class="col-md-5">
+            <div class="shadow rounded overflow-hidden">
+                <img src="{{ receta.imagen_url }}" alt="Imagen de {{ receta.nombre }}" class="img-fluid w-100">
+            </div>
+        </div>
+
+        <!-- Contenido -->
+        <div class="col-md-7">
+            <h1 class="display-5 text-success fw-bold">{{ receta.nombre }}</h1>
+            <p class="text-muted mb-4">Una receta tradicional llena de historia y sabor.</p>
+
+            <h4 class="text-dark">Ingredientes</h4>
+            <ul class="list-group mb-4">
+                {% for ingrediente in receta.ingredientes %}
+                <li class="list-group-item">{{ ingrediente }}</li>
+                {% endfor %}
+            </ul>
+
+            <h4 class="text-dark">Instrucciones</h4>
+            <p style="white-space: pre-line;">{{ receta.instrucciones }}</p>
+
+            <a href="{{ receta.fuente }}" target="_blank" class="btn btn-outline-success mt-3">Ver fuente original</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
