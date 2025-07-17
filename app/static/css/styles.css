@@ -260,43 +260,25 @@ body {
 .btn-receta:hover {
     background-color: #e64a19;
 }
-.recetas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
+
+.detalle-receta h1 {
+    font-size: 2.5rem;
+    color: #2e7d32;
 }
 
-.receta-card {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.detalle-receta ul.list-group {
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 
-.receta-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+.detalle-receta li.list-group-item {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-weight: 500;
 }
 
-.receta-info {
-  padding: 1rem;
-}
-
-.btn-receta {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #e74c3c;
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  margin-top: 0.5rem;
-}
-
-.btn-receta:hover {
-  background: #c0392b;
+.detalle-receta p {
+    font-size: 1rem;
+    line-height: 1.6;
 }
